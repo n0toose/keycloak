@@ -25,7 +25,7 @@ keycloak_service_desc: Keycloak
 keycloak_configure_firewalld: False
 
 ### administrator console password
-keycloak_admin_password: ''
+keycloak_admin_password: "{{ lookup('passwordstore'), keycloak_adminpass }}"
 
 ### Common configuration settings
 keycloak_bind_address: 0.0.0.0

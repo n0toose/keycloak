@@ -22,7 +22,7 @@ keycloak_quarkus_configure_firewalld: False
 
 ### administrator console password
 keycloak_quarkus_admin_user: admin
-keycloak_quarkus_admin_pass: ''
+keycloak_quarkus_admin_pass: "{{ lookup('passwordstore'), keycloak_quarkus_adminpass }}"
 keycloak_quarkus_master_realm: master
 
 ### Configuration settings
